@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from .serializer import ClienteSerializer
+from .serializers import ClienteSerializer
 from .models import Cliente
 
 # Create your views here.
