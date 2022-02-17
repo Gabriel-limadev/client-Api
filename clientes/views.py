@@ -2,6 +2,8 @@ from rest_framework import viewsets, filters
 from .serializers import ClienteSerializer
 from .models import Cliente
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
  
@@ -15,3 +17,6 @@ class ClientesViewSet(viewsets.ModelViewSet):
     search_fields = ['nome', 'cpf']
     # Busca Exata
     filterset_fields = ['ativo']
+    # Segurança
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]

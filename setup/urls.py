@@ -8,5 +8,5 @@ routers.register('clientes', ClientesViewSet, basename='Clientes')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(routers.urls))
+    path('/', include(routers.urls))
 ]
