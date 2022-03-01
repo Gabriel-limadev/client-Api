@@ -16,7 +16,7 @@ class ClientsViewSet(viewsets.ModelViewSet):
     # Busca não exata
     search_fields = ['name', 'cpf']
     # Busca Exata
-    filterset_fields = ['active']
+    filterset_fields = ['name', 'cpf', 'active']
     # Segurança
     authentication_classes = [BasicAuthentication]
     permission_classes = [IsAuthenticated]

@@ -3,7 +3,6 @@ from .models import Client
 
 from client.validators import *
 
-
 class ClientsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
@@ -12,7 +11,7 @@ class ClientsSerializer(serializers.ModelSerializer):
     # Validações
     def validate(self, data):
         """Validate studant data """
-        if valid_name(data['name']):
+        if not valid_name(data['name']):
             raise serializers.ValidationError({'name': 'The name field cannot contain numbers'})
 
         # Validate CPF
