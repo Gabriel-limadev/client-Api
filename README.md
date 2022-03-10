@@ -1,5 +1,9 @@
 ## 📎 Technologies
 
+## Login API
+- User: convidado
+- Password: 123456
+
 Project was developed with the following technologies:
 - [Django-Rest-Framework](https://www.django-rest-framework.org/)
 
